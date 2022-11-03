@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form validation</title>
+    <link rel="stylesheet" href="form.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css"
+      rel="stylesheet"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="moment.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/f49bf42b6e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="outer_wrapper">
+      <div class="form_wrapper">
+        <div class="heading-wrapper">
+          <h1 class="form_heading">Registration Form</h1>
+        </div>
+        <p class="text">
+          Kindly fill the registration form for further process
+        </p>
+        <form>
+          <div class="inputfield_wrapper">
+            <div class="name_wrapper">
+              <div class="firstname_wrapper">
+                <label for="firstname" class="firstname">First Name</label>
+                <input
+                  type="text"
+                  class="first_name"
+                  id="firstname"
+                  oninput="firstnamevalidate();validate()"
+                  maxlength="255"
+                  placeholder="Enter First Name"
+                />
+
+                <span id="firstnamemsg" class="firstname"></span>
+              </div>
+
+              <div class="lastname_wrapper">
+                <label for="lastname" class="lastname">Last Name</label>
+                <input
+                  type="text"
+                  class="last_name"
+                  id="lastname"
+                  oninput="lastnamevalidate();validate()"
+                  maxlength="255"
+                  placeholder="Enter Last Name"
+                />
+
+                <span id="lastnamemsg" class="lastname"></span>
+              </div>
+            </div>
+
+            <label for="email" style="text-align: left">Email</label>
+            <input
+              type="email"
+              class="mail_id"
+              id="email"
+              placeholder="Enter email"
+              autocomplete="off"
+              oninput="emailvalidate();validate()"
+            />
+            <span id="message"></span>
+
+            <div class="reg-wrapper">
+              <div class="password">
+                <label for="reg_password">RegisterPassword</label>
+                <input
+                  type="password"
+                  class="register_password"
+                  id="reg_password"
+                  placeholder="Enter password"
+                  maxlength="255"
+                  oninput="passwordvalidate();validate();regpasswordvalidate()"
+                />
+                <i
+                  class="fa fa-fw fa-eye field-icon toggle-password"
+                  id="togglepassword"
+                ></i>
+
+                <span id="passwordmessage"></span>
+              </div>
+              <div class="confirmpswd">
+                <label for="confirm_password">Confirm Password</label>
+                <input
+                  type="password"
+                  class="confirm_password"
+                  id="confirm_password"
+                  placeholder="Enter ConfirmPassword"
+                  maxlength="255"
+                  oninput="confirmpasswordvalidate();validate()"
+                />
+                <i
+                  class="fa fa-fw fa-eye fields-icon toggle-password"
+                  id="togglepasswords"
+                ></i>
+
+                <span id="confirmpassword_message"></span>
+              </div>
+            </div>
+            <label for="phonenumber">Mobile No</label>
+            <input type="tel" class="mobile_number" id="phonenumber" />
+            <span id="valid-msg" class="hide validclass">Valid</span>
+            <span id="error-msg" class="hide invalidclass">Invalid number</span>
+
+            <label for="dateofbirth">Date of Birth</label>
+            <input
+              type="date"
+              class="last_name"
+              id="dateofbirth"
+              placeholder="DD/MM/YYYY"
+              max="2022-11-03"
+              oninput="validatedob();validate()"
+            />
+            <span id="dob"></span>
+
+            <div class="button_wrapper">
+              <input
+                type="submit"
+                class="button"
+                id="button"
+                value="Register"
+                onclick="validate()"
+                disabled
+              />
+            </div>
+          </div>
+          <p class="content">
+            Already a member?<a href="#" class="link">Sign in</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="form.js"></script>
+  </body>
+  <script>
+    const phoneInputField = document.querySelector("#phonenumber");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+    var formattedNumber = intlTelInputUtils.formatNumber(
+      "phonenumber",
+      "gb",
+      intlTelInputUtils.numberFormat.INTERNATIONAL
+    );
+    // "+44 7733 123456"
+  </script>
+</html>
