@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+  .outer_wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background: #5C258D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form_wrapper {
+    height: max-content;
+    width: 35rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+  }
+  .heading-wrapper{
+    
+  }
+  
+  .form_heading {
+    text-align: center;
+    color:#5C258D;
+  }
+  .inputfield_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+    gap: 0.625rem;
+    height: 100%;
+  }
+  input {
+    width: 100%;
+    padding: 0.875rem;
+    outline: none;
+    border-radius: 0.375rem;
+    border: 0.063rem solid lightgrey;
+    box-sizing: border-box;
+    
+  }
+  .reg-wrapper{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    gap:10px;
+  }
+  .name_wrapper {
+    display: flex;
+    flex-direction: row;
+   /* justify-content: space-between;*/
+    width: 100%;
+    gap:10px;
+  }
+  label {
+    font-size: 1rem;
+    color:black;
+  }
+  .firstname {
+  /* margin-top: 0.62rem;*/
+  }
+  .lastname {
+   /* margin-top: 0.625rem;*/
+  }
+  .button_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.25rem;
+  }
+  .button {
+    font-size: 1.25rem;
+    outline: none;
+    border: 0.063rem solid lightgray;
+    color: white;
+    width: 100%;
+    background-color: lightsteelblue;
+  }
+
+  .firstname_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    width:50%;
+  }
+  .lastname_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    width:50%;
+  }
+  .last_name{
+    width:100%;
+  }
+  .text {
+    text-align: center;
+    color: gray;
+  }
+  .content {
+    color: gray;
+    text-align: center;
+    margin-top: 0.625rem;
+  }
+  .password {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .password-message{
+    display: block;
+  }
+  .field-icon {
+    position: absolute;
+    right: 0.625rem;
+    top: 3.013rem;
+    cursor: pointer;
+  }
+  .confirmpswd {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .fields-icon {
+    position: absolute;
+    right: 0.625rem;
+    top: 3.013rem;
+    cursor:pointer;
+  }
+  .iti {
+    width: 100%;
+  }
+  .link{
+    color:blue;
+    margin-left: 0.188rem;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .outer_wrapper {
+      height: 100%;
+      width: 100%;
+    }
+    .form_wrapper {
+      width: 100%;
+    }
+    
+    }
+  
